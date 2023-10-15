@@ -1,0 +1,406 @@
+@import url('<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Delicious+Handrawn&family=Edu+NSW+ACT+Foundation&family=Geostar+Fill&family=Lato&family=Nanum+Brush+Script&family=Roboto+Condensed&family=Roboto:wght@300;400;500&family=Rubik+Gemstones&display=swap" rel="stylesheet">');
+
+:root {
+    --green: #27ae60;
+    --black: #192a56;
+    --light-color: #9b9faa;
+    --box-shadow: 0 5rem 1.5rem rgba(0,0,0,0.1);
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 82.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .navbar {
+    display: flex;}
+
+header .navbar div {
+    position: relative;
+}
+
+header .navbar div ul {
+    position: absolute;
+}
+/* CSS cho ô tìm kiếm */
+.search-container {
+    text-align: center;
+}
+
+#search-box {
+    width: 450px;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+    color: var(--black);
+}
+
+#search-button {
+    background-color: #00BF63;
+    color: var(--black);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #45a049;
+}
+
+header form {
+    padding: .5rem 3.5rem;
+}
+
+header .logo {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+   
+}
+
+header .logo img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+header .navbar div {
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);}
+
+header .navbar div:hover {
+    background: var(--green);
+    font-weight: bolder;
+    color: var(--black);
+}
+
+
+
+header .navbar a {
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header .navbar a:hover {
+    color: #fff;
+    background: var(--green);
+}
+
+/* Ẩn danh sách môn học và danh sách lớp học mặc định */
+.sub-subject {
+    display: none;}
+
+.class {
+    display: none;
+}
+
+.sub-account {
+    display: none;
+    width: 5000px;
+}
+
+/* Hiển thị danh sách môn học khi di chuột vào "Môn Học" */
+.monhoc:hover .sub-subject {
+    display: block;
+    list-style: none;
+    top: 30px;
+    width: 270px;
+    padding: 15px 30px;
+    color: var(--black);
+    background: #fff;
+}
+
+.taikhoan:hover .sub-account {
+    display: block;
+    list-style: none;
+    top: 30px;
+    padding: 15px 30px;
+    color: var(--black);
+    background: #fff;
+}
+
+/* Hiển thị danh sách lớp học khi di chuột vào môn học cụ thể */
+.subject:hover .class {
+    display: block;
+    list-style: none;
+    left: 120px;
+    top: 100px;
+    width: 250px;
+    color: var(--black);
+}
+
+
+
+header .navbar a form label input{
+    padding: .5rem 3.5rem;
+}
+
+header .navbar a i {
+    padding-left: 1.5rem;
+}
+
+header .navbar .active, header .navbar a:hover {
+    color: black;
+    background: #00BF63;
+    font-weight: bolder;
+}
+
+.home .home-slider .slide {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 9rem;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--green);
+}
+
+/* Định dạng phần tử video */
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Thiết kế nút điều khiển video */
+video::-webkit-media-controls {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 10px;
+}
+
+/* Màu khi hover vào nút điều khiển */
+video::-webkit-media-controls-play-button:hover,
+video::-webkit-media-controls-mute-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    border-radius: 10px;
+}
+
+/* Điều chỉnh kích thước của nút điều khiển */
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-mute-button {
+    width: 20px;
+    height: 20px;
+}
+
+/* Định dạng phần tử chứa video */
+#videoList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+/* Định dạng video */
+/* Định dạng video */
+video {
+    width: 100%; /* Chiều rộng video là 100% của container */
+    margin-bottom: 20px; /* Khoảng cách dưới của video */
+    border: 1px solid #ddd; /* Đường viền xung quanh video */
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
+
+
+.review .heading {
+    text-align: center;
+    color: #00BF63;
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-weight: bolder;
+    padding-top: 100px;
+}
+
+.review .slide {
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    border: .1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    position: relative;
+}
+
+.review .slide .fa-quote-right {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: #ccc;
+}
+
+.review .slide .user {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.review .slide .user img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review.slide .user h3 {
+    color: var(--black);
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
+.review .slide.user i {
+    font-size: 1.3rem;
+    color: var(--green);
+}
+
+.review .slide p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: var(--light-color);
+}
+
+
+
+/* Footer */
+
+.footer {
+    padding-top: 20px;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem,.5fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    padding: .5rem 0;
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.footer .box-container .box a {
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+
+.footer .box-container .box a:hover {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.footer .credit {
+    text-align: center;
+    border-top: .1rem solid rgba(0,0,0,0.1);
+    font-size: 2rem;
+    color: var(--black);
+    padding-left: .5rem;
+    padding-top: 1.rem;
+    margin-top: 1.5rem;
+}
+
+.footer .credit span {
+    color: var(--green);
+}
+
+
+
+
+/**/
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+
+    header .navbar {
+        position: absolute;
+        top:100%;
+        right:0;
+        left:0;
+        background: #fff;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #eee;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font: 50%;
+    }
+
+    .dishes .box-container .box img {
+        height: auto;
+        width: 100%;
+    }
+
+    .order form .inputBox .input {
+        width: 100%;
+    }
+}
